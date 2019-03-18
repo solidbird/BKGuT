@@ -20,6 +20,8 @@ import java.util.Arrays;
 public class Karriere extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
 
+    aaaaaaaaaaaaa
+
     String table = "tbl_Abschluss";
     String[] colums = null;
     String whereClause = null;
