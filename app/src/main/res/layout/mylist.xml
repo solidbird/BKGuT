@@ -1,0 +1,15 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textView2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:drawableTop="@drawable/ic_prof"
+    android:text="TextView"
+    android:textAlignment="center"
+    android:background="@drawable/rectangle_draw"
+    android:autoLink="all"
+    android:padding="15dp"
+    android:textSize="22sp">
+
+</TextView>

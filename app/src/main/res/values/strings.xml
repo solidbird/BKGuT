@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BKGuT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Berufskolleg für Gestaltung und Technik</string>
+    <string name="nav_header_subtitle">infogut@berufskolleg-aachen.de</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">KEK</string>
+    <string name="karriere_describ">Ich glaube diese App ist dazu\nda, um dir irgendwelche\nKarriere zeugs vorzuschalgen.\nLmao</string>
+</resources>

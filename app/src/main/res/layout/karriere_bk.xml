@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Karriere">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/keek"
+        android:textSize="35dp"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:text="Karriere:" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abschluss:" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bereich:" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_marginLeft="50dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Fertig" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dein Bildungsangebote am BK-GuT:" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <HorizontalScrollView
+
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/drawMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

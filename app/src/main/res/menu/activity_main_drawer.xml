@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_karriere"
+            android:icon="@mipmap/karriere"
+            android:title="Karriere" />
+        <item
+            android:id="@+id/nav_termine"
+            android:icon="@mipmap/termine"
+            android:title="Termine" />
+        <item
+            android:id="@+id/nav_kontakte"
+            android:icon="@mipmap/kontakte"
+            android:title="Kontakte" />
+    </group>
+
+    <item android:title="Social">
+        <menu>
+            <item
+                android:id="@+id/facebook"
+                android:icon="@mipmap/facebook"
+                android:title="Facebook" />
+            <item
+                android:id="@+id/insta"
+                android:icon="@mipmap/instagram"
+                android:title="Instagram" />
+            <item
+                android:id="@+id/reddit"
+                android:icon="@mipmap/reddit"
+                android:title="Reddit" />
+        </menu>
+    </item>
+
+</menu>
