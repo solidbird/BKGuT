@@ -11,11 +11,3 @@
 /build
 /captures
 .externalNativeBuild
-
-
-build/**
-!build/app
-!build/app/outputs
-!build/app/outputs/apk
-!build/app/outputs/apk/release
-!build/app/outputs/apk/release/app-release.apk
