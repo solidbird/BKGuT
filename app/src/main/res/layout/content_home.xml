@@ -5,9 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <WebView
-        android:id="@+id/webkek"
+    
+    <android.support.v4.widget.Space
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="75dp" />
+
+    <ViewFlipper
+        android:id="@+id/slideShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/home" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/karriere" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/termine" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@mipmap/kontakte" />
+
+    </ViewFlipper>
+
+
+
 </LinearLayout>

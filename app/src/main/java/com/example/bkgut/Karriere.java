@@ -1,6 +1,8 @@
 package com.example.bkgut;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +32,7 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
 
     int rowNumb= 0;
     String arg1 = "0", arg2="Berufsvorbereitung";
+    Space sp;
     LinearLayout ln;
 
     @Override
@@ -37,8 +41,11 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
 
         ln = (LinearLayout) vw.findViewById(R.id.karriere_card);
 
+        sp = new Space(getActivity().getApplicationContext());
+        sp.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 1000));
+
         final ArrayList<String> arrayStr1 = tblAbschluss();
-        String[] arrayStr2 = new String[]{"Berufsvorbereitung","Informationstechnik","Elektrotechnik","Gesundheitstechnik"};
+        String[] arrayStr2 = new String[]{"Berufsvorbereitung","Informationstechnik"," ","Elektrotechnik","Gesundheitstechnik"};
         ArrayList<String> arrayStr = new ArrayList<String>();
         arrayStr.addAll(Arrays.asList(arrayStr2));
 
@@ -111,6 +118,19 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
         return ar;
     }
 
+    public ArrayList<String> getLinkOfBildungsgang(){
+        ArrayList<String> ar = new ArrayList<String>();
+        DatabaseHandler dbh = new DatabaseHandler(getActivity().getApplicationContext());
+        Cursor c = dbh.makeSQLData(table, colums, whereClause, whereArgs, groupBy, having, orderBy);
+        rowNumb =c.getCount();
+        if (c.moveToFirst()){
+            do {
+                ar.add(c.getString(6));
+            }while (c.moveToNext());
+        }
+        return ar;
+    }
+
     @Override
     public void onClick(View v) {
         Toast.makeText(getActivity().getApplicationContext(),"LMAO clicked",Toast.LENGTH_LONG).show();
@@ -120,19 +140,24 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
         table="tbl_Bildungsgang";
-        ArrayList<String> ar = tblBildungsgang();
-
-
         whereClause = "AbschlussPrio <= ? AND Bereich = ?";
 
         if(parent.getId()==R.id.karr_spin1){
             arg1 = String.valueOf(position);
+
         }else if (parent.getId()==R.id.karr_spin2){
             arg2 = parent.getItemAtPosition(position).toString();
+
         }
 
+        System.out.println("Karr_spin1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: " + arg1);
+        System.out.println("Karr_spin2 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB: " + arg2);
+
         whereArgs=new String[]{ arg1, arg2 };
-        System.out.println("AAAAAAAAAAAAAAAAA: "+arg1 + "   BBBBBBBBBBBBBBBBBBB:  "+arg2);
+
+        ArrayList<String> ar = tblBildungsgang();
+        final ArrayList<String> links = getLinkOfBildungsgang();
+
         if (rowNumb > 0){
             CardView[] card = new CardView[rowNumb];
 
@@ -142,6 +167,7 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
             ViewGroup.LayoutParams pamTxt = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
             ln.removeAllViews();
+
             for (int i = 0; i < card.length; i++){
 
                 TextView txt = new TextView(getActivity().getApplicationContext());
@@ -161,10 +187,14 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
                 card[i].setLayoutParams(pamCard);
                 card[i].removeAllViews();
                 card[i].addView(linLay);
+
+                card[i].setOnClickListener(this);
                 ln.addView(card[i]);
             }
         }else{
-            System.out.println("LMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAOLMAO");
+            ln.removeAllViews();
+            ln.addView(sp);
+
         }
     }
 

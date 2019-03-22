@@ -1,7 +1,6 @@
 package com.example.bkgut;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,7 +12,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
@@ -121,7 +119,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         //c = db.rawQuery(query,null);
 
         Cursor c = db.query(table,colums,whereClause,whereArgs,groupBy,having,orderBy);
-        System.out.println(table + "\n" + colums + "\n" + whereClause  + "\n" + (whereArgs!=null?whereArgs[0]:"NULL") + "\n" + groupBy + "\n" + having  + "\n" + orderBy);
+        //System.out.println(table + "\n" + colums + "\n" + whereClause  + "\n" + (whereArgs!=null?whereArgs[0]:"NULL") + "\n" + groupBy + "\n" + having  + "\n" + orderBy);
 
         return c;
 

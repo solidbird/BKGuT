@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ViewFlipper;
 
 public class Home extends Fragment {
 
@@ -20,7 +22,21 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View vw = inflater.inflate(R.layout.content_home, container,false);
 
-        WebView weeb = (WebView) vw.findViewById(R.id.webkek);
+        ViewFlipper vf = (ViewFlipper) vw.findViewById(R.id.slideShow);
+
+        Animation fade_in = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),android.R.anim.fade_in);
+        Animation fade_out = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),android.R.anim.fade_out);
+
+        vf.setInAnimation(fade_in);
+        vf.setOutAnimation(fade_out);
+
+        vf.setAutoStart(true);
+        vf.setFlipInterval(5000);
+        vf.startFlipping();
+
+
+
+        /*WebView weeb = (WebView) vw.findViewById(R.id.webkek);
 
         WebSettings webs = weeb.getSettings();
         webs.setJavaScriptEnabled(true);
@@ -42,8 +58,7 @@ public class Home extends Fragment {
                 }
             }
         });
-        weeb.setWebViewClient(new WebViewClient());
-        weeb.loadUrl(OOF);
+        weeb.loadUrl(OOF);*/
 
         return vw;
     }
