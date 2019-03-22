@@ -7,4 +7,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">KEK</string>
     <string name="karriere_describ">Ich glaube diese App ist dazu\nda, um dir irgendwelche\nKarriere zeugs vorzuschalgen.\nLmao</string>
+    <string name="home_describ">Wir begrüßen Sie in der inoffizielen App vom
+Berufskolleg für Gestaltung und Technik Aachen.
+In dieser App können Sie ihre Karriere bei uns an der
+Schule auf Ihre persönlichen Bedingungen planen.
+Desweiteren finden Sie auch noch einen terminplaner
+mit wichtigen Veranstaltungen.</string>
 </resources>

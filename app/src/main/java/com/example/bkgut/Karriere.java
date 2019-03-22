@@ -45,7 +45,7 @@ public class Karriere extends Fragment implements View.OnClickListener, AdapterV
         sp.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 1000));
 
         final ArrayList<String> arrayStr1 = tblAbschluss();
-        String[] arrayStr2 = new String[]{"Berufsvorbereitung","Informationstechnik"," ","Elektrotechnik","Gesundheitstechnik"};
+        String[] arrayStr2 = new String[]{"Berufsvorbereitung","Informationstechnik","Gestaltungstechnik","Elektrotechnik","Gesundheitstechnik"};
         ArrayList<String> arrayStr = new ArrayList<String>();
         arrayStr.addAll(Arrays.asList(arrayStr2));
 
