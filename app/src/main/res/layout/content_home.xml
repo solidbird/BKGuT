@@ -18,22 +18,22 @@
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/logo_bild" />
+            android:src="@mipmap/kontakte" />
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/schule_v" />
+            android:src="#ff0000" />
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/etpr" />
+            android:src="#ffff00" />
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/gestaltung" />
+            android:src="#0000ff" />
 
     </ViewFlipper>
 
@@ -67,7 +67,7 @@
         android:alignmentMode="alignMargins"
         android:columnOrderPreserved="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="15dp">
 
         <android.support.v7.widget.CardView
