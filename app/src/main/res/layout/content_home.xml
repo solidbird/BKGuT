@@ -6,39 +6,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <android.support.v4.widget.Space
-        android:layout_width="fill_parent"
-        android:layout_height="75dp" />
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
 
     <ViewFlipper
         android:id="@+id/slideShow"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="125dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a_schule_v" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a_gestaltung" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a_etpr" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/a_tuer" />
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="@mipmap/kontakte" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="#ff0000" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="#ffff00" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="#0000ff" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/a_logo_bild" />
 
     </ViewFlipper>
 
     <android.support.v4.widget.Space
-        android:layout_width="fill_parent"
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
         android:layout_height="25dp" />
 
     <TextView
