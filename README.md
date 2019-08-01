@@ -1,6 +1,2 @@
 # BKGuT
-App
-
-ABCD
-
-KEK
+Shit ass school project
