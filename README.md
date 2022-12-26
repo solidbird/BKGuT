@@ -1,3 +1,2 @@
 # BKGuT
-Shit ass school project
-kekw 123
+Little App I build while leaarning it on the fly. Don't have big expectations.
